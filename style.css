@@ -1,0 +1,45 @@
+/* Home Page */
+body {
+    background: cornflowerblue;
+  }
+  
+  .screen {
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    background-color: darkgreen;
+    display: flexbox;
+    text-align: center;
+  }
+  
+
+.home{
+    width: 100%;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight:bold;
+    font-size: small;
+    min-height: 8vh;
+}
+
+#title{
+    width: fit-content;
+    margin: auto;
+    font-family: Georgia;
+    text-decoration: overline underline red;
+}
+
+#cards{
+    width: fit-content;
+    margin: auto;
+}
+
+#play{
+    width: fit-content;
+    margin: auto;
+}
+
+#hand{
+   flex-direction: row;
+   justify-content: space-between;
+}
