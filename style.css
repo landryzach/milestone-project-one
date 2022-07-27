@@ -11,6 +11,13 @@ body {
     display: flexbox;
     text-align: center;
   }
+
+  .playScreen{
+    min-height: 80vh;
+    background-color: darkgreen;
+    display: flexbox;
+    text-align: center;
+  }
   
 
 .home{
@@ -39,7 +46,3 @@ body {
     margin: auto;
 }
 
-#hand{
-   flex-direction: row;
-   justify-content: space-between;
-}
