@@ -4,21 +4,10 @@ body {
   }
   
   .screen {
-    display: flex;
-    min-height: 80vh;
-    flex-direction: column;
-    background-color: darkgreen;
-    display: flexbox;
-    text-align: center;
-  }
-
-  .playScreen{
     min-height: 80vh;
     background-color: darkgreen;
-    display: flexbox;
     text-align: center;
   }
-  
 
 .home{
     width: 100%;
@@ -34,6 +23,7 @@ body {
     margin: auto;
     font-family: Georgia;
     text-decoration: overline underline red;
+    display: flexbox;
 }
 
 #cards{
@@ -46,3 +36,12 @@ body {
     margin: auto;
 }
 
+#hand{
+  display: inline-flex;
+  column-gap: 150px;
+}
+
+table{
+  margin: auto;
+  width: 250px;
+}
