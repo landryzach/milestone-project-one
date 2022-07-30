@@ -3,32 +3,46 @@ const deck = ["A Clubs", "2 Clubs", "3 Clubs", "4 Clubs", "5 Clubs", "6 Clubs", 
     "A Spades", "2 Spades", "3 Spades", "4 Spades", "5 Spades", "6 Spades", "7 Spades", "8 Spades", "9 Spades", "10 Spades", "J Spades", "Q Spades", "K Spades",
     "A Diamonds", "2 Diamonds", "3 Diamonds", "4 Diamonds", "5 Diamonds", "6 Diamonds", "7 Diamonds", "8 Diamonds", "9 Diamonds", "10 Diamonds", "J Diamonds", "Q Diamonds", "K Diamonds"];
 
+const userCard = deck[Math.floor(Math.random() * deck.length)];
+const userCard2 = deck[Math.floor(Math.random() * deck.length)];
+const cpuCard = deck[Math.floor(Math.random() * deck.length)];
+const cpuCard2 = deck[Math.floor(Math.random() * deck.length)];
+const newCard = deck[Math.floor(Math.random() * deck.length)];
+
+
+// function user(){
+//     return hand = [userCard, userCard2]
+// }
+
+// function cpu(){
+//     return hand = [userCard, userCard2]
+// }
+// user();
+// cpu();
+// console.log(hand)
+
 function userHand() {
-    for(let i = 0; i < deck.length; i++){
-        const user1 = deck[Math.floor(Math.random() * deck.length)];
-        console.log(user1)
-        const user2 = deck[Math.floor(Math.random() * deck.length)];
-        
-    }
+  return user = [userCard, userCard2];
 }
 
-function cpuHand(){
-
+function cpuHand() {
+    return cpu = [cpuCard, cpuCard2];
 }
+userHand();
+cpuHand();
+console.log(user);
+console.log(cpu);
 
-// const user = deck[Math.floor(Math.random() * deck.length)];
-//  console.log(user); 
- 
-// const cpu = deck[Math.floor(Math.random() * deck.length)];
-//  console.log(cpu);
+
 
 function startGame(){
 
 }
     
 function hitMe(){
-
+    return card = [newCard]
 }
+hitME();
 
 function stay(){
 
