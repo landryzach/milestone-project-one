@@ -31,11 +31,6 @@ body {
     margin: auto;
 }
 
-#play{
-    width: fit-content;
-    margin: auto;
-}
-
 #hand{
   display: inline-flex;
   column-gap: 150px;
@@ -44,4 +39,30 @@ body {
 table{
   margin: auto;
   width: 250px;
+}
+
+.card{
+  background-color: white;
+  border: 2px solid;
+  height:200px;
+  width: 100px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#hitMe{
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  border: 2px solid Black;
+  
+}
+
+#stay{
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  border: 2px solid Black;
 }

@@ -5,31 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>skipdaygames.com - Blackjack</title>
+    <title>Blackjack</title>
 </head>
 <body>
     <header class="home">
         Milestone Project 1 - Blackjack
     </header>
-    <main class="screen">
+    <main class="screen" onload="startGame()">
+        <title>Blackjack</title>
         <h1 id="title">Blackjack</h1>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>User</th>
-                    <th>CPU</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="user">0</td>
-                    <td id="cpu">0</td>
-                </tr>
-            </tbody>
-            <div id="hand"></div>
-            <div id="hand"></div>
-        </table>
+        <h3>User1</h3>
+        <div id="user1"></div>
+        <h3>User2</h3>
+        <div id="user2"></div>
+        <button id="hitMe" onclick="hitMe()">Hit Me</button>
+        <button id="stay">Stay</button>
     </main>
     <footer class="home">
         Milestone Project 1 - Blackjack
