@@ -16,18 +16,6 @@ const user2Card = deck[Math.floor(Math.random() * deck.length)];
 const user2Card2 = deck[Math.floor(Math.random() * deck.length)];
 const newCard = deck[Math.floor(Math.random() * deck.length)];
 
-
-// function user1(){
-//     return hand = [userCard, userCard2]
-// }
-
-// function user2(){
-//     return hand = [userCard, userCard2]
-// }
-// user1();
-// user2();
-// console.log(hand)
-
 function user1Hand() {
   return user1 = [user1Card, user1Card2];
 }
@@ -42,7 +30,7 @@ user2.push(user2Hand)
 function startGame(){
     user1Hand();
     user2Hand();
-    //add user getSum
+    getSum();
 }
     
 function hitMe(){
