@@ -49,14 +49,16 @@ function startGame(){
 function hitMe1(){
     
     let user1 = deck.pop();
+    User1.push(user1);
     user1Score += getScore(user1);
-    console.log(user1, "hit")
+    console.log(user1, "hit1")
 }
 
 function hitMe2(){
     let user2 = deck.pop();
+    User2.push(user2);
     user2Score += getScore(user2);
-    console.log(user2, "hit");
+    console.log(user2, "hit2");
 }
 
 
