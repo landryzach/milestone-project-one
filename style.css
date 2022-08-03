@@ -1,12 +1,14 @@
 /* Home Page */
 body {
-    background: cornflowerblue;
+    background: black;
+  color: white;
   }
   
   .screen {
     min-height: 80vh;
     background-color: darkgreen;
     text-align: center;
+    color: black
   }
 
 .home{
@@ -28,28 +30,47 @@ body {
 
 .card{
   background-color: white;
-  border: 2px solid;
+  border: 2px solid black;
   height:200px;
   width: 100px;
   padding: 10px;
   border-radius: 15px;
 }
 
-#hitMe{
+#hitMe1{
   height: 25px;
   width: 75px;
   border-radius: 5px;
-  background-color: cornflowerblue;
+  background-color: gold;
   border: 2px solid Black;
-  
+  font-weight: 600;
 }
 
-#stay{
+#stay1{
   height: 25px;
   width: 75px;
   border-radius: 5px;
-  background-color: cornflowerblue;
+  background-color: red;
   border: 2px solid Black;
+  font-weight: 600;
+}
+
+#hitMe2{
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: gold;
+  border: 2px solid Black;
+  font-weight: 600;
+}
+
+#stay2{
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: red;
+  border: 2px solid Black;
+  font-weight: 600;
 }
 
 #user1{
