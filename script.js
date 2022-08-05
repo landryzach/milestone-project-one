@@ -7,7 +7,7 @@ let User1 = [];
 let User2 = [];
 let user1Score = 0;
 let user2Score = 0;
-let hit = true;
+let hit = false;
 
 
 function shuffle() {
@@ -17,6 +17,7 @@ function shuffle() {
         deck[i] = deck[d];
         deck[d] = x;
     }
+    console.log(deck);
 } //got framing of this code from https://www.programiz.com/javascript/examples/shuffle-card
 //shuffle is complete and is working
 
@@ -37,21 +38,26 @@ function startGame(){
     
     document.getElementById("hitMe1").addEventListener("click", hitMe1);
     document.getElementById("hitMe2").addEventListener("click", hitMe2);
-    document.getElementById("stay1").addEventListener("click", stay);
-    document.getElementById("stay2").addEventListener("click", stay);
+    document.getElementById("stay1").addEventListener("click", stay1);
+    document.getElementById("stay2").addEventListener("click", stay2);
 
     document.getElementById("user1").innerText = User1;
     document.getElementById("user2").innerText = User2;
     document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
     document.getElementById("u2score").innerText = "User2:" + " " + user2Score;
+    hitMe1.disabled = false;
+    hitMe2.disabled = false;
+    stay1.disabled = false;
+    stay2.disabled = false;
 }
 
 function hitMe1(){
-    
     let user1 = deck.pop();
     User1.push(user1);
     user1Score += getScore(user1);
     console.log(user1, "hit1")
+    document.getElementById("user1").innerText = User1;
+    document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
 }
 
 function hitMe2(){
@@ -59,12 +65,14 @@ function hitMe2(){
     User2.push(user2);
     user2Score += getScore(user2);
     console.log(user2, "hit2");
+    document.getElementById("user2").innerText = User2;
+    document.getElementById("u2score").innerText = "User2:" + " " + user2Score;
 }
 
 
 
-function stay(){
-    hit = false;
+function stay1(){
+
 
     let result = "";
     console.log(result, "result");
@@ -74,9 +82,21 @@ function stay(){
         result = "User1 Wins!";
     } else if (user1Score < user2Score){
         result = "User2 Wins!";
-    }
+    } 
+}
 
+function stay2(){
     
+
+    let result = "";
+    console.log(result, "result");
+    if (user1Score === user2Score){
+        result = "It's a tie";
+    } else if (user1Score > user2Score){
+        result = "User1 Wins!";
+    } else if (user1Score < user2Score){
+        result = "User2 Wins!";
+    } 
 }
 
 function getScore(hand){
