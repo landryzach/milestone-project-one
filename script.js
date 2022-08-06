@@ -40,8 +40,6 @@ function startGame(){
     document.getElementById("stay1").addEventListener("click", stay1);
     document.getElementById("stay2").addEventListener("click", stay2);
 
-   
-
     document.getElementById("user1").innerText = User1;
     document.getElementById("user2").innerText = User2;
     document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
@@ -54,7 +52,7 @@ function hitMe1(){
     let user1 = deck.pop();
     User1.push(user1);
     user1Score += getScore(user1);
-    console.log(user1, "hit1")
+    
     document.getElementById("user1").innerText = User1;
     document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
 
@@ -69,7 +67,7 @@ function hitMe2(){
     let user2 = deck.pop();
     User2.push(user2);
     user2Score += getScore(user2);
-    console.log(user2, "hit2");
+    
     document.getElementById("user2").innerText = User2;
     document.getElementById("u2score").innerText = "User2:" + " " + user2Score;
 
@@ -86,7 +84,10 @@ function stay1(){
 
 function stay2(){
     document.getElementById("hitMe2").disabled = true;
+    // end();
 }
+
+
 
 function getScore(hand){
     let cards = hand.split(" ").slice(0,2);
@@ -108,20 +109,37 @@ function getScore(hand){
 } //thanks for the help on this one!
 //getScore is complete and is working
 
-function end()
-    {
-        
-        let result = "";
-        if (user1Score === user2Score){
-            result = "It's a tie";
-        } else if (user1Score > user2Score){
-            result = "User1 Wins!";
-        } else if (user1Score < user2Score){
-            result = "User2 Wins!";
-        }  
-    }
-
 window.onload = () => {
     shuffle();
     startGame();
 }
+
+function winner() {
+    if (user1Score === user2Score){
+        alert("It's a tie");
+        document.getElementById("message").innerText = "The game will restart in 5 seconds."
+        setTimeout("location.reload(true);", 5000);
+    } else if (user1Score > user2Score){
+        alert("User1 Wins!");
+        document.getElementById("message").innerText = "The game will restart in 5 seconds."
+        setTimeout("location.reload(true);", 5000);
+    } else if (user1Score < user2Score){
+     alert("User2 Wins!");
+     document.getElementById("message").innerText = "The game will restart in 5 seconds."
+        setTimeout("location.reload(true);", 5000);
+     }
+}
+
+function end(){
+    if(hitMe1){
+        document.getElementById("hitMe1").disabled = true;
+    } if(hitMe2){
+        document.getElementById("hitMe2").disabled = true;
+        return winner();
+    }
+    }
+    
+
+
+
+
