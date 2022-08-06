@@ -7,7 +7,6 @@ let User1 = [];
 let User2 = [];
 let user1Score = 0;
 let user2Score = 0;
-let hit = false;
 
 
 function shuffle() {
@@ -41,15 +40,15 @@ function startGame(){
     document.getElementById("stay1").addEventListener("click", stay1);
     document.getElementById("stay2").addEventListener("click", stay2);
 
+   
+
     document.getElementById("user1").innerText = User1;
     document.getElementById("user2").innerText = User2;
     document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
     document.getElementById("u2score").innerText = "User2:" + " " + user2Score;
-    hitMe1.disabled = false;
-    hitMe2.disabled = false;
-    stay1.disabled = false;
-    stay2.disabled = false;
+;
 }
+    
 
 function hitMe1(){
     let user1 = deck.pop();
@@ -58,6 +57,12 @@ function hitMe1(){
     console.log(user1, "hit1")
     document.getElementById("user1").innerText = User1;
     document.getElementById("u1score").innerText = "User1:" + " " + user1Score;
+
+    if(user1Score > 21){
+        alert("User2 wins");
+        document.getElementById("message").innerText = "The game will restart in 5 seconds."
+        setTimeout("location.reload(true);", 5000);
+    }
 }
 
 function hitMe2(){
@@ -67,36 +72,20 @@ function hitMe2(){
     console.log(user2, "hit2");
     document.getElementById("user2").innerText = User2;
     document.getElementById("u2score").innerText = "User2:" + " " + user2Score;
+
+    if(user2Score > 21){
+        alert("User1 wins");
+        document.getElementById("message").innerText = "The game will restart in 5 seconds."
+        setTimeout("location.reload(true);", 5000);
+    }
 }
 
-
-
 function stay1(){
-
-
-    let result = "";
-    console.log(result, "result");
-    if (user1Score === user2Score){
-        result = "It's a tie";
-    } else if (user1Score > user2Score){
-        result = "User1 Wins!";
-    } else if (user1Score < user2Score){
-        result = "User2 Wins!";
-    } 
+    document.getElementById("hitMe1").disabled = true;
 }
 
 function stay2(){
-    
-
-    let result = "";
-    console.log(result, "result");
-    if (user1Score === user2Score){
-        result = "It's a tie";
-    } else if (user1Score > user2Score){
-        result = "User1 Wins!";
-    } else if (user1Score < user2Score){
-        result = "User2 Wins!";
-    } 
+    document.getElementById("hitMe2").disabled = true;
 }
 
 function getScore(hand){
@@ -119,8 +108,20 @@ function getScore(hand){
 } //thanks for the help on this one!
 //getScore is complete and is working
 
+function end()
+    {
+        
+        let result = "";
+        if (user1Score === user2Score){
+            result = "It's a tie";
+        } else if (user1Score > user2Score){
+            result = "User1 Wins!";
+        } else if (user1Score < user2Score){
+            result = "User2 Wins!";
+        }  
+    }
+
 window.onload = () => {
     shuffle();
     startGame();
 }
-
