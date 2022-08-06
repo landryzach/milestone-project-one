@@ -12,6 +12,7 @@ If a user goes over 21, a message appears stating the other user has won the gam
 After the "Ok" button is pressed, another message will appear towards the bottom of the page stating the game will restart in 5 seconds.
 Once the user hits the "Stay" button, the "Hit Me" button is disabled until the next game.
 Right now, the end game function is tied to User2's stay button. I will continue to work so I can find a solution where the end function is invoked after both "Stay" buttons are pressed, regardless of order.
+I am currently working to add card images to each user.
 I'll add a home screen, which I originally had, and have the game start on a button.
 I'll also continue to work on the CSS, so the game looks better.
 If you guys have any suggestions for improvement, please let me know so I can continue to grow my knowledge!
