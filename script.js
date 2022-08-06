@@ -84,7 +84,7 @@ function stay1(){
 
 function stay2(){
     document.getElementById("hitMe2").disabled = true;
-    // end();
+    end();
 }
 
 
